@@ -3,7 +3,7 @@ class TagsController < ApplicationController
 
   def index
     tags = Tag.all
-    render json: tags
+    render json: tags , except: [:created_at , :update_at ,:id]
   end
 
   def show
